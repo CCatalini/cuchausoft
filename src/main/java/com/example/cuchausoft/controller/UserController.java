@@ -29,9 +29,14 @@ public class UserController {
 
     /* Hay que acceder a las operaciones creadas en el service del negocio*/
    @Autowired
-    private  UserServiceImp userServiceImp;
+    private UserServiceImp userServiceImp;
 
     //llamado con endpoints
+
+    @GetMapping
+    public String view(){
+        return "create";
+    }
 
     @PostMapping("/create")
     public ResponseEntity<UserDto> createUser (@RequestBody UserDto user ){

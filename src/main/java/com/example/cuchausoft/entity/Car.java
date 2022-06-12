@@ -1,15 +1,14 @@
 package com.example.cuchausoft.entity;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table (name = "car")
 public class Car {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private int id;
     // strategy = generation.auto te lo da random
     // UUID es un tipo de dato
 
@@ -32,7 +31,7 @@ public class Car {
 
     }
 
-    public Car(UUID id, String marca, String modelo, String dominio, int año, double km, String color, double precio) {
+    public Car(int id, String marca, String modelo, String dominio, int año, double km, String color, double precio) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -43,11 +42,11 @@ public class Car {
         this.precio = precio;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

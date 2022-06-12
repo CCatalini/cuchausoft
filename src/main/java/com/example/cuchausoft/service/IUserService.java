@@ -6,7 +6,7 @@ import com.example.cuchausoft.entity.User;
 import java.util.List;
 
 
-public interface UserServiceInterface {
+public interface IUserService {
 
     UserDto createUser (UserDto user);
 

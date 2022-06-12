@@ -1,5 +1,8 @@
 package com.example.cuchausoft.dtos;
 
+import com.example.cuchausoft.entity.Role;
+
+import java.util.Collection;
 import java.util.UUID;
 
 /**
@@ -15,6 +18,7 @@ public class UserDto {
 
     private String mail;
 
+
     public UserDto(Integer id, String name, String password, String mail) {
         this.id = id;
         this.name = name;
@@ -22,6 +26,12 @@ public class UserDto {
         this.mail = mail;
     }
 
+    public UserDto(String mail) {
+        this.mail = mail;
+    }
+
+    public UserDto() {
+    }
 
     public String getName() {
         return name;

@@ -2,11 +2,13 @@ package com.example.cuchausoft.service;
 
 
 import com.example.cuchausoft.dtos.UserDto;
+import com.example.cuchausoft.entity.Role;
 import com.example.cuchausoft.entity.User;
-import com.example.cuchausoft.repository.UserRepository;
+import com.example.cuchausoft.repository.IUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,16 +27,16 @@ import java.util.Optional;
  * implementaciones de cada una de las operaciones crud
  */
 @Service
-public class UserServiceImp implements UserServiceInterface {
+public class UserServiceImp implements IUserService {
 
     @Autowired
-    private UserRepository userRepo;
+    private IUser userRepo;
 
 
 
     @Override
     public UserDto createUser(UserDto user) {
-        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail());
+        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail(), Arrays.asList(new Role("name")));
 
         //guarda usuario en la base de datos
         userRepo.save(newUser);
@@ -44,7 +46,7 @@ public class UserServiceImp implements UserServiceInterface {
 
     @Override
     public UserDto update(UserDto user) {
-        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail());
+        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail(), Arrays.asList((new Role("name"))));
 
         userRepo.save(newUser);
 
