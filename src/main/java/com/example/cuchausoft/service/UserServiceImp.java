@@ -4,6 +4,7 @@ package com.example.cuchausoft.service;
 import com.example.cuchausoft.dtos.UserDto;
 import com.example.cuchausoft.entity.Role;
 import com.example.cuchausoft.entity.User;
+import com.example.cuchausoft.interfaceService.IUserService;
 import com.example.cuchausoft.repository.IUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

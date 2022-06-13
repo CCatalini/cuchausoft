@@ -21,6 +21,7 @@ public class User {
 
     private String mail;
 
+    /*
     @ManyToMany(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
                 name = "roles de usuarios",
@@ -31,13 +32,13 @@ public class User {
                                                     name = "rol_id", referencedColumnName = "id")
     )
     private Collection<Role> roles;
-
+*/
     public User(Integer id, String name, String password, String mail, Collection<Role> roles) {
         this.id = id;
         this.name = name;
         this.password = password;
         this.mail = mail;
-        this.roles = roles;
+      //  this.roles = roles;
     }
 
     public User() {

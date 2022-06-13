@@ -1,4 +1,4 @@
-package com.example.cuchausoft.service;
+package com.example.cuchausoft.interfaceService;
 
 import com.example.cuchausoft.dtos.UserDto;
 import com.example.cuchausoft.entity.User;
