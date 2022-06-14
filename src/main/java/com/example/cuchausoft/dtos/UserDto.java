@@ -1,10 +1,5 @@
 package com.example.cuchausoft.dtos;
 
-import com.example.cuchausoft.entity.Role;
-
-import java.util.Collection;
-import java.util.UUID;
-
 /**
  *
  */

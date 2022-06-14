@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping
+@RequestMapping("/cars")
 public class CarController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class CarController {
         List<Car> carList = carService.listar();
         model.addAttribute("cars", carList);
         // retorna el nombre del archivo HTML
-        return "index";
+        return "listar";
     }
 
     @GetMapping("/new")

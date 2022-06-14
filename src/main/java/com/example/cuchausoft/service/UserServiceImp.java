@@ -2,7 +2,6 @@ package com.example.cuchausoft.service;
 
 
 import com.example.cuchausoft.dtos.UserDto;
-import com.example.cuchausoft.entity.Role;
 import com.example.cuchausoft.entity.User;
 import com.example.cuchausoft.interfaceService.IUserService;
 import com.example.cuchausoft.repository.IUser;
@@ -37,7 +36,7 @@ public class UserServiceImp implements IUserService {
 
     @Override
     public UserDto createUser(UserDto user) {
-        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail(), Arrays.asList(new Role("name")));
+        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail());
 
         //guarda usuario en la base de datos
         userRepo.save(newUser);
@@ -47,7 +46,7 @@ public class UserServiceImp implements IUserService {
 
     @Override
     public UserDto update(UserDto user) {
-        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail(), Arrays.asList((new Role("name"))));
+        User newUser = new User(user.getId(), user.getName(), user.getPassword(), user.getMail());
 
         userRepo.save(newUser);
 
