@@ -29,7 +29,7 @@ public class CarService implements ICarService {
     public int save(Car car) {
         int pepe=0;
         Car carSaved = data.save(car);
-        pepe++;
+        if(!carSaved.equals(null)) return pepe=1;
         return pepe;
     }
 
