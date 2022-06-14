@@ -22,7 +22,7 @@ public class CarService implements ICarService {
 
     @Override
     public Optional<Car> listarID(int id) {
-        return Optional.empty();
+        return data.findById(id);
     }
 
     @Override
@@ -35,6 +35,6 @@ public class CarService implements ICarService {
 
     @Override
     public void delete(int id) {
-
+        data.deleteById(id);
     }
 }
